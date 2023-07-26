@@ -4,8 +4,8 @@ import numpy as np
 import math 
 import torch
 import argparse
-from deepsort.detection_helpers import *
-from deepsort.tracking_helpers import *
+from deep_sort.detection_helpers import *
+from deep_sort.tracking_helpers import *
 from  bridge_wrapper import *
 from collections import deque
 from utils.general import check_img_size, check_requirements, check_imshow, non_max_suppression, apply_classifier, \

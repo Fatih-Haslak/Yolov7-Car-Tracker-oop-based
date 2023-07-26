@@ -20,7 +20,7 @@ class CarCounter():
     def __init__(self,model_path,src):
         
         self.dedector=ObjectDetector(model_path,src)
-        self.tracker = YOLOv7_DeepSORT(reID_model_path="deepsort/deep_sort/model_weights/mars-small128.pb",detector=self.dedector)
+        self.tracker = YOLOv7_DeepSORT(reID_model_path="deep_sort/deep_sort/model_weights/mars-small128.pb",detector=self.dedector)
 
         self.in_line=[]
         self.out_line=[]
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     src=args.input_string
             
-    count = CarCounter('/home/fatih/yolov7/yolov7.pt',src)
+    count = CarCounter('yolov7.pt',src)
     count.counter()
 
 

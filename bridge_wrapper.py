@@ -18,13 +18,13 @@ import matplotlib.pyplot as plt
 from tensorflow.compat.v1 import ConfigProto # DeepSORT official implementation uses tf1.x so we have to do some modifications to avoid errors
 
 # deep sort imports
-from deepsort.deep_sort import preprocessing, nn_matching
-from deepsort.deep_sort.detection import Detection
-from deepsort.deep_sort.tracker import Tracker
+from deep_sort.deep_sort import preprocessing, nn_matching
+from deep_sort.deep_sort.detection import Detection
+from deep_sort.deep_sort.tracker import Tracker
 
 # import from helpers
-from deepsort.tracking_helpers import read_class_names, create_box_encoder
-from deepsort.detection_helpers import *
+from deep_sort.tracking_helpers import read_class_names, create_box_encoder
+from deep_sort.detection_helpers import *
 from detect_oop import ObjectDetector
 
  # load configuration for object detector
@@ -37,7 +37,7 @@ class YOLOv7_DeepSORT:
     Class to Wrap ANY detector  of YOLO type with DeepSORT
     '''
     def __init__(self, reID_model_path:str, detector=None, max_cosine_distance:float=0.4, nn_budget:float=None, nms_max_overlap:float=1.0,
-    coco_names_path:str ="deepsort/io_data/input/classes/coco.names",  ):
+    coco_names_path:str ="deep_sort/io_data/input/classes/coco.names",  ):
         '''
         args: 
             reID_model_path: Path of the model which uses generates the embeddings for the cropped area for Re identification
